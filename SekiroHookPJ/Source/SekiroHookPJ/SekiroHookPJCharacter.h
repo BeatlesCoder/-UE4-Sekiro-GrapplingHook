@@ -83,12 +83,14 @@ class ASekiroHookPJCharacter : public ACharacter
     return kunai_->GetComponentTransform(); 
   }
 	FORCEINLINE const FTransform& KunaiIdleSocketTransform() const 
-  { 
-    return GetMesh()->GetSocketTransform("Idle_Kunai_Socket"); 
+  {
+		return kunai_->GetComponentTransform(); 
+   // return GetMesh()->GetSocketTransform("Idle_Kunai_Socket");
   }
 	FORCEINLINE const FTransform& KunaiSwingSocketTransform() const
-  { 
-    return GetMesh()->GetSocketTransform("Swing_Kunai_Socket"); 
+  {
+		return kunai_->GetComponentTransform(); ;
+   // return GetMesh()->GetSocketTransform("Swing_Kunai_Socket");
   }
 	FORCEINLINE const FVector& LastFocusedPointTrackerLoc() const
   { 
